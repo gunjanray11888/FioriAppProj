@@ -1,0 +1,14 @@
+<core:FragmentDefinition xmlns="sap.m" xmlns:l="sap.ui.layout" xmlns:f="sap.ui.layout.form" xmlns:core="sap.ui.core">
+	<f:SimpleForm id="SimpleFormDisplayITab1" editable="false" title="Plant">
+		<f:content>
+			<Label text="Plant"/>
+			<Text id="PlantTextITab1" text="{plantModel>/Plant}"/>
+			<Label text="Profit Center"/>
+			<Text id="ProfitCenterITab1" text="{plantModel>/ProfitCenter}"/>
+			<Label text="Maintenance Status Name"/>
+			<Text id="MaintStatITab1" text="{plantModel>/MaintenanceStatusName}"/>
+			<Label text="Purchasing Group"/>
+			<Text id="PurchasingGroupITab1" text="{plantModel>/PurchasingGroup}"/>
+		</f:content>
+	</f:SimpleForm>
+</core:FragmentDefinition>

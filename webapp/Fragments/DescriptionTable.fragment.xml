@@ -1,0 +1,33 @@
+<core:FragmentDefinition xmlns="sap.m" xmlns:l="sap.ui.layout" xmlns:f="sap.ui.layout.form" xmlns:core="sap.ui.core">
+	<Table
+				id="tableDesc"
+				width="auto"
+				items="{
+					path: 'prodDesc>/results'
+				}"
+				noDataText="{worklistView>/tableNoDataText}"
+				growing="true"
+				growingScrollToLoad="true">
+		
+		<columns>
+					<Column id="LanguageCol">
+						<Text text="Language" id="ProductLanguage"/>
+					</Column>
+					<Column id="DescriptionCol">
+						<Text text="Product Description" id="productDescCol" />
+					</Column>
+	    </columns>
+	    
+	    <items>
+	    	<!--<DisplayListItem label="{Language}" value="{ProductDescription}">-->
+	    	<!--</DisplayListItem>-->
+	    	<ColumnListItem>
+						<cells>
+						<Label text="{prodDesc>Language}" />
+						<Label text="{prodDesc>ProductDescription}" />
+			            </cells>
+		   </ColumnListItem>
+	    </items>
+		
+	</Table>
+</core:FragmentDefinition>

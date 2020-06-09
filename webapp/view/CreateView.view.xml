@@ -1,0 +1,96 @@
+<mvc:View
+    xmlns="sap.m"
+	xmlns:core="sap.ui.core"
+	xmlns:mvc="sap.ui.core.mvc"
+	xmlns:semantic="sap.f.semantic"
+	xmlns:footerbar="sap.ushell.ui.footerbar"
+	xmlns:f="sap.ui.layout.form"
+	xmlns:l="sap.ui.layout"
+    controllerName="gj.api.test.APITestProj.controller.CreateView"
+	xmlns:html="http://www.w3.org/1999/xhtml">
+	
+	
+	<semantic:SemanticPage
+		id="createPage"
+		headerPinnable="false"
+		toggleHeaderOnTitleClick="false"
+		showFooter="true">
+
+		<semantic:titleHeading>
+			<Title
+				text="Create Product details"
+				level="H2">
+			</Title>
+		</semantic:titleHeading>
+
+		<semantic:headerContent>
+			<core:Icon src="sap-icon://add-product" size="4em" />
+		</semantic:headerContent>
+
+        <semantic:content>
+        	<VBox class="sapUiSmallMargin">
+        	<f:SimpleForm id="SimpleFormCreatePrdct"
+			editable="true"
+			layout="ResponsiveGridLayout"
+			labelSpanXL="4"
+			labelSpanL="3"
+			labelSpanM="4"
+			labelSpanS="12"
+			adjustLabelSpan="false"
+			emptySpanXL="0"
+			emptySpanL="4"
+			emptySpanM="0"
+			emptySpanS="0"
+			columnsXL="2"
+			columnsL="1"
+			columnsM="1"
+			singleContainerFullSize="false">
+        	<f:content>
+        		<Toolbar ariaLabelledBy="Title1">
+					<Title id="Title1" text="Product Details"/>
+					<ToolbarSpacer />
+				</Toolbar>
+        		
+        		<Label text="Product ID" />
+				<Input value="ID"/>
+				<Label text="Product Description" />
+				<Input value="" />
+				<Input value="Short Form">
+					<layoutData>
+						<l:GridData span="XL2 L1 M3 S4" />
+					</layoutData>
+				</Input>
+				<Label text="Weight" />
+				<Input value="Gross Weight">
+				</Input>
+				<Input value="Net Weight" />
+				<Label text="Plant Country" />
+				<Select id="country" selectedKey="{Country}">
+					<items>
+						<core:Item text="England" key="England"/>
+						<core:Item text="Germany" key="Germany"/>
+						<core:Item text="USA" key="USA"/>
+					</items>
+				</Select>
+        		
+        		<Toolbar ariaLabelledBy="Title2">
+					<Title id="Title2" text="Handling Unit Details"/>
+					<ToolbarSpacer />
+				</Toolbar>
+				<Label text="Handling Unit" />
+				<Input value="Unit" />
+				<Label text="Measurement" />
+				<Input value="" />
+        		
+        	</f:content>
+		    </f:SimpleForm>
+        	</VBox>
+        </semantic:content>
+
+        <semantic:footerCustomActions>
+       	    <Button text="Save" press="onCreSave"></Button>
+       	    <Button text="Cancel" press="onCreCancel" ></Button>
+       	</semantic:footerCustomActions>
+
+	 </semantic:SemanticPage>
+</mvc:View>

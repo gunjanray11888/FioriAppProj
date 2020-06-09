@@ -1,0 +1,7 @@
+.backgroundImageClass {
+ /*background-image: url("../Images/S_Pics.jpg");*/
+ background-color: #cccccc;
+ background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}

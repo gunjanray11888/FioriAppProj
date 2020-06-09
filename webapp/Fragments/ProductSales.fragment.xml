@@ -1,0 +1,14 @@
+<core:FragmentDefinition xmlns="sap.m" xmlns:l="sap.ui.layout" xmlns:f="sap.ui.layout.form" xmlns:core="sap.ui.core">
+	<f:SimpleForm id="SimpleFormDisplayITab2" editable="false" title="Product Sales data">
+		<f:content>
+			<Label text="Sales Status"/>
+			<Text id="PlantTextITab2" text="{= ${SalesModel>/SalesStatus}==='' ? 'Not Sold' : ${SalesModel>/SalesStatus}}"/>
+			<Label text="Sales Status Validity Date"/>
+			<Text id="ProfitCenterITab2" text="{= ${SalesModel>/SalesStatusValidityDate}===null ? 'No date found' : ${SalesModel>/SalesStatusValidityDate}}"/>
+			<Label text="Tax Classification"/>
+			<Text id="MaintStatITab2" text="{= ${SalesModel>/TaxClassification}==='' ? 'Not defined' : ${SalesModel>/TaxClassification}}"/>
+			<Label text="Transportation Group"/>
+			<Text id="PurchasingGroupITab2" text="{= ${SalesModel>/TransportationGroup}==='' ? 'Not defined' : ${SalesModel>/TransportationGroup} }"/>
+		</f:content>
+	</f:SimpleForm>
+</core:FragmentDefinition>
